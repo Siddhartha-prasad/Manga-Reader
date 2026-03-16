@@ -41,17 +41,17 @@ function Home() {
             (rel) => rel.type === "cover_art"
           );
 
-          const coverFile = cover?.attributes?.fileName;
+          const coverFile = manga.relationships.find(
+            (r) => r.type === "cover_art"
+          )?.attributes?.fileName;
 
-          const coverUrl = coverFile
-            ? `https://uploads.mangadex.org/covers/${m.id}/${coverFile}.256.jpg`
-            : "";
+          const coverUrl = `https://uploads.mangadex.org/covers/${manga.id}/${coverFile}`;
 
           return (
 
             <Link key={m.id} to={`/manga/${m.id}`}>
               <div className="manga-card">
-                <img src={coverUrl} alt="" width="150" />
+                <img src={coverUrl} alt={title} width="150" />
                 <h3>{m.attributes.title.en}</h3>
               </div>
             </Link>
