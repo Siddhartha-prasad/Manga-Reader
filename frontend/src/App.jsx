@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MangaDetails from "./pages/MangaDetails";
 import Reader from "./pages/Reader";
-import { useState } from "react";
 import "./App.css";
 
 
