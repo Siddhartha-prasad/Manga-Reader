@@ -51,8 +51,8 @@ function Home() {
 
             <Link key={m.id} to={`/manga/${m.id}`}>
               <div className="manga-card">
-                <img src={coverUrl} alt={manga.attributes.title?.en || "Manga Cover"} width="150" />
-                <h3>{manga.attributes.title?.en || "Manga Cover"}</h3>
+                <img src={coverUrl} alt={m.attributes.title.en || "Manga Cover"} width="150" />
+                <h3>{m.attributes.title.en}</h3>
               </div>
             </Link>
 
